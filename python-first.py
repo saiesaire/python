@@ -1,4 +1,5 @@
 # coding:utf-8
+import sys
 
 def sample(x):
   if (x % 3 == 0):
@@ -8,9 +9,8 @@ def sample(x):
   else:
     print(x,"はそれ以外の数")
 
-print("""５です
-５なんです
-４じゃありません""")
-x = 5
-for x in range(1, 20 + 1):
-  y = sample(x)
+print("いくつまで表示しますか？")
+y = int(input())
+print(y,"回")
+for x in range(1, y + 1):
+  sample(x)
